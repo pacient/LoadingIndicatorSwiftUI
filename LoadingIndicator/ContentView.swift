@@ -23,10 +23,13 @@
 import SwiftUI
 
 struct ContentView : View {
-    var colors: [Color] = [.blue, .red, .yellow, .green]
+    var gradients: [LinearGradient] = [
+        LinearGradient(gradient: Gradient(colors: [.red, .pink]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .leading, endPoint: .trailing)
+        ]
     
     var body: some View {
-        LoadingIndicator(shapeFills: colors, lineWidth: 10)
+        LoadingIndicator(shapeFills: gradients, lineWidth: 10)
             .frame(width: 50, height: 50)
             .padding(20)
     }
