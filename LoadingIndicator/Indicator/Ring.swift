@@ -30,8 +30,8 @@ struct Ring : Shape {
         let end = fillPoint * 360
         var start: Double
         
-        if fillPoint > (1 - delayPoint) {
-            start = 360 * (2 * fillPoint - 1.0)
+        if fillPoint > delayPoint {
+            start = 360 * (2 * fillPoint)
         } else {
             start = 0
         }
