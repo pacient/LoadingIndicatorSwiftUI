@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
-//  TestingVideos
-//
-//  Created by Vasil Blanco-Nunev on 2019-07-11.
 //  Copyright © 2019 Vasil Blanco-Nunev. All rights reserved.
 //
 
 import SwiftUI
 
 struct ContentView : View {
+    var colors: [Color] = [.blue, .red, .yellow, .green]
+    
     var body: some View {
-        Text("Hello World")
+        LoadingIndicator(shapeFills: colors, lineWidth: 10)
+            .frame(width: 50, height: 50)
+            .padding(20)
     }
 }
 

@@ -13,10 +13,12 @@
 		ED5E418422D756610006E8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5E418322D756610006E8DB /* Assets.xcassets */; };
 		ED5E418722D756610006E8DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5E418622D756610006E8DB /* Preview Assets.xcassets */; };
 		ED5E418A22D756610006E8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5E418822D756610006E8DB /* LaunchScreen.storyboard */; };
+		ED87760122D78FE7008D95CE /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87760022D78FE7008D95CE /* LoadingIndicator.swift */; };
+		ED87760322D79006008D95CE /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87760222D79006008D95CE /* Ring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED5E417A22D756600006E8DB /* TestingVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5E417A22D756600006E8DB /* LoadingIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5E417D22D756600006E8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED5E417F22D756600006E8DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED5E418122D756600006E8DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		ED5E418622D756610006E8DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5E418922D756610006E8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5E418B22D756610006E8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED87760022D78FE7008D95CE /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		ED87760222D79006008D95CE /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 		ED5E417122D756600006E8DB = {
 			isa = PBXGroup;
 			children = (
-				ED5E417C22D756600006E8DB /* TestingVideos */,
+				ED5E417C22D756600006E8DB /* LoadingIndicator */,
 				ED5E417B22D756600006E8DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,14 +52,15 @@
 		ED5E417B22D756600006E8DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED5E417A22D756600006E8DB /* TestingVideos.app */,
+				ED5E417A22D756600006E8DB /* LoadingIndicator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED5E417C22D756600006E8DB /* TestingVideos */ = {
+		ED5E417C22D756600006E8DB /* LoadingIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				ED8775FF22D78FD5008D95CE /* Indicator */,
 				ED5E417D22D756600006E8DB /* AppDelegate.swift */,
 				ED5E417F22D756600006E8DB /* SceneDelegate.swift */,
 				ED5E418122D756600006E8DB /* ContentView.swift */,
@@ -64,7 +69,7 @@
 				ED5E418B22D756610006E8DB /* Info.plist */,
 				ED5E418522D756610006E8DB /* Preview Content */,
 			);
-			path = TestingVideos;
+			path = LoadingIndicator;
 			sourceTree = "<group>";
 		};
 		ED5E418522D756610006E8DB /* Preview Content */ = {
@@ -75,12 +80,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ED8775FF22D78FD5008D95CE /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				ED87760022D78FE7008D95CE /* LoadingIndicator.swift */,
+				ED87760222D79006008D95CE /* Ring.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED5E417922D756600006E8DB /* TestingVideos */ = {
+		ED5E417922D756600006E8DB /* LoadingIndicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED5E418E22D756610006E8DB /* Build configuration list for PBXNativeTarget "TestingVideos" */;
+			buildConfigurationList = ED5E418E22D756610006E8DB /* Build configuration list for PBXNativeTarget "LoadingIndicator" */;
 			buildPhases = (
 				ED5E417622D756600006E8DB /* Sources */,
 				ED5E417722D756600006E8DB /* Frameworks */,
@@ -90,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = TestingVideos;
+			name = LoadingIndicator;
 			productName = TestingVideos;
-			productReference = ED5E417A22D756600006E8DB /* TestingVideos.app */;
+			productReference = ED5E417A22D756600006E8DB /* LoadingIndicator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED5E417522D756600006E8DB /* Build configuration list for PBXProject "TestingVideos" */;
+			buildConfigurationList = ED5E417522D756600006E8DB /* Build configuration list for PBXProject "LoadingIndicator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED5E417922D756600006E8DB /* TestingVideos */,
+				ED5E417922D756600006E8DB /* LoadingIndicator */,
 			);
 		};
 /* End PBXProject section */
@@ -146,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED87760122D78FE7008D95CE /* LoadingIndicator.swift in Sources */,
 				ED5E417E22D756600006E8DB /* AppDelegate.swift in Sources */,
+				ED87760322D79006008D95CE /* Ring.swift in Sources */,
 				ED5E418022D756600006E8DB /* SceneDelegate.swift in Sources */,
 				ED5E418222D756600006E8DB /* ContentView.swift in Sources */,
 			);
@@ -286,13 +302,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "TestingVideos/Preview\\ Content";
+				DEVELOPMENT_TEAM = UFUPW9YJS3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestingVideos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vasil.nunev.TestingVideos;
+				PRODUCT_BUNDLE_IDENTIFIER = vasil.nunev.LoadingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,13 +322,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "TestingVideos/Preview\\ Content";
+				DEVELOPMENT_TEAM = UFUPW9YJS3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestingVideos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vasil.nunev.TestingVideos;
+				PRODUCT_BUNDLE_IDENTIFIER = vasil.nunev.LoadingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED5E417522D756600006E8DB /* Build configuration list for PBXProject "TestingVideos" */ = {
+		ED5E417522D756600006E8DB /* Build configuration list for PBXProject "LoadingIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED5E418C22D756610006E8DB /* Debug */,
@@ -330,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED5E418E22D756610006E8DB /* Build configuration list for PBXNativeTarget "TestingVideos" */ = {
+		ED5E418E22D756610006E8DB /* Build configuration list for PBXNativeTarget "LoadingIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED5E418F22D756610006E8DB /* Debug */,
