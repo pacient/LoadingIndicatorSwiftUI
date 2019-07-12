@@ -23,39 +23,34 @@
 #if canImport(SwiftUI)
 import SwiftUI
 
-struct LoadingIndicator<C: ShapeStyle> : View {
-    @State private var fillPoint: Double = 0.0
-    @State private var currentIndex = 0
+struct Ring : Shape {
+    var delayPoint = 0.5
+    var fillPoint: Double
     
-    var shapeFills: [C]
-    var lineWidth: Length
-    var duration: Double = 0.8
-    
-    private var animation: Animation {
-        Animation.basic(duration: duration).repeatForever(autoreverses: false)
+    func path(in rect: CGRect) -> Path {
+        let end = fillPoint * 360
+        var start: Double
+        
+        if fillPoint > delayPoint {
+            start = 360 * (2 * fillPoint)
+        } else {
+            start = 0
+        }
+        
+        var path = Path()
+        
+        path.addArc(center: CGPoint(x: rect.size.width/2, y: rect.size.width/2),
+                    radius: rect.size.width/2,
+                    startAngle: .degrees(start),
+                    endAngle: .degrees(end),
+                    clockwise: false)
+        
+        return path
     }
     
-    private var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: duration, repeats: true) {_ in
-            if self.currentIndex + 1 >= self.shapeFills.count {
-                self.currentIndex = 0
-            } else {
-                self.currentIndex += 1
-            }
-        }
-    }
-    
-    var body: some View {
-        Ring(fillPoint: fillPoint).stroke(shapeFills[currentIndex], lineWidth: lineWidth)
-            .aspectRatio(1, contentMode: .fit)
-            .onAppear() {
-                withAnimation(self.animation) {
-                    self.fillPoint = 1.0
-                    if self.shapeFills.count > 1 {
-                        _ = self.timer
-                    }
-                }
-        }
+    var animatableData: Double {
+        get { return fillPoint }
+        set { fillPoint = newValue }
     }
 }
 #endif
